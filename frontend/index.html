@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>照片变空间</title>
+  <link rel="stylesheet" href="/static/style.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "@mkkellogg/gaussian-splats-3d": "https://cdn.jsdelivr.net/npm/@mkkellogg/gaussian-splats-3d@0.4.7/build/gaussian-splats-3d.module.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>照片变空间</h1>
+    <p>上传一张照片，生成可以移动视角的高斯模型。</p>
+  </header>
+
+  <main>
+    <aside>
+      <form id="upload-form">
+        <label for="photo">选择 JPG 或 PNG 照片</label>
+        <input id="photo" type="file"
+               accept=".jpg,.jpeg,.png" required>
+        <button id="generate" type="submit">生成空间模型</button>
+      </form>
+
+      <hr>
+
+
+
+      <p id="status" role="status">等待操作</p>
+      <a id="download" hidden>下载 .ply 模型</a>
+      <a id="logs" target="_blank" hidden>查看任务日志</a>
+
+      <p class="tip">
+        左键拖动旋转视角，滚轮缩放，右键拖动平移。
+        建议先小幅移动，观察照片的空间感。
+      </p>
+    </aside>
+
+    <section id="viewer" aria-label="空间模型查看器"></section>
+  </main>
+
+  <script type="module" src="/static/viewer.js"></script>
+</body>
+</html>

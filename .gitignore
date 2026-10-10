@@ -1,0 +1,13 @@
+uploads/
+outputs/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.idea/
+.DS_Store
+.env
+.env.*
+*.ply
+*.pt
+*.pth

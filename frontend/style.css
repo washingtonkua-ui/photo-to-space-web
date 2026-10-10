@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #10141d;
+  color: #e9eef8;
+}
+
+header {
+  padding: 22px 28px;
+  border-bottom: 1px solid #30394b;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+
+header p {
+  margin: 0;
+  color: #a8b4cc;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+}
+
+aside {
+  padding: 24px;
+  background: #181e2b;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #6487ff;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #30394b;
+  margin: 22px 0;
+}
+
+#status {
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+a {
+  display: block;
+  color: #a5c6ff;
+  margin-top: 12px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.tip {
+  color: #a8b4cc;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+#viewer {
+  position: relative;
+  height: calc(100vh - 105px);
+  min-height: 450px;
+  overflow: hidden;
+  background: #080b12;
+}
+
+@media (max-width: 720px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  #viewer {
+    height: 65vh;
+  }
+}
